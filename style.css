@@ -1,0 +1,469 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Philosopher&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;           margin: 0;      
+    box-sizing: border-box;
+    font-size: 1.7rem;  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    user-select: none;
+    color: #ffffff;
+    --var1: #3E1CAB;
+    /* bg color  */
+    --var2: rgba(98,85,223,0.6); 
+    --var3: #563AC3; 
+    --var4: #95D5F6; 
+} 
+
+.headerbg{
+    width: 100%;
+    height:  70rem;   
+    background: var(--var2);  
+    position: relative;
+    align-items: center;
+} 
+.headerbg img{
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} 
+header{
+  position:  absolute;
+  top: 0;
+  left: 0;
+  padding: 0 8rem;
+  width: 100%; 
+  background-image: linear-gradient(rgba(98,85,223,0.6),rgba(98,85,223,0.6)), url(./Images/sunset-sea.jpg);
+  background-size: 100% 100%;
+  height: 70rem;
+}
+header .logo {
+    padding: 2rem 0;
+    font-family: 'Lemonada', cursive;
+    color: var(--var4);
+}
+header .weatherapp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-gap: 5rem; 
+}
+header .weatherapp .left{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    /* flex: 1 1 20rem; */
+}
+header .weatherapp .left h2{
+    font-size: 5rem;
+    font-weight: 500; 
+}
+header .weatherapp .left p{
+    margin: 2rem 0;
+    line-height: 3rem;
+    font-weight: 400;
+    width: 47rem;
+}
+header .weatherapp .left form{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--var4);
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+    margin: 5rem 0 2rem 0;
+}
+header .weatherapp .left form input{
+    width: 93%;
+    background: transparent;
+    outline: none;
+    padding: .5rem ;
+    border: none; 
+}
+header .weatherapp .left form  button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+header .weatherapp .left form input::placeholder{
+     color: #ffffff;
+}
+header .weatherapp .left form button i{
+    cursor: pointer;
+}
+header .weatherapp .right{
+    width: 50%; 
+}
+header .weatherapp .right .weatherreport{
+    width: 100%; 
+    background:  var(--var1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    opacity: 0;
+    visibility: hidden;    
+    transform: translateY(2rem); 
+}
+header .weatherapp .right .weatherreport.showtemp{
+    opacity: 1;
+    visibility:  visible;   
+    transform: translateY(0); 
+    transition:  all .3s ease-out;
+}
+header .weatherapp .right .weatherreport .topbox{
+   width: 100%;
+   display: flex;
+   grid-gap: 1rem;
+   padding: 1rem 1rem;
+   background:  var(--var3);
+   position: relative;
+}
+ 
+header .weatherapp .right .weatherreport .topbox .reportinfo{
+    display: flex;
+    flex-direction: column;
+    grid-gap: .5rem; 
+}
+header .weatherapp .right .weatherreport .topbox .reportinfo h5{
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+header .weatherapp .right .weatherreport .topbox .reportinfo  p{
+    font-size: 1.6rem; 
+}
+header .weatherapp .right .weatherreport .topbox img{
+   width: 6rem; 
+}
+header .weatherapp .right .weatherreport .detailboxes{
+    width: 100%;
+    display: flex; 
+    grid-gap: 1rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo{
+    width: 40%;
+    display: flex; 
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempbox{
+    width: 100%;
+    height: 23rem;
+    padding: 3rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    grid-gap: .5rem;
+    justify-content: center;
+    background: var(--var3);
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempbox h3{
+    font-size: 5.5rem;
+    font-weight: 500;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempbox > div{
+     text-transform: capitalize;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport{
+    width: 100%;
+    height:  auto;
+    padding: 2rem 1rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 3rem;
+    background: var(--var3);
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport > h5 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport > h5::after{
+    content: "";
+    width: 100%;
+    height: .5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom: 2px solid #ffffff;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small{
+    display: flex;  
+    grid-gap: 2rem;
+    background: var(--var3);
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 2rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small .secdate{
+    display: flex;
+    align-items: center;
+    grid-gap: 0.8rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small .secdate span{     
+    font-size: 1.3rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small .secdate i{
+    font-size: 1.6rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div .temp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: .5rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div .temp h5{
+    text-transform: uppercase;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div img{
+    width: 10rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div .temp p{
+   font-size: 1rem;
+}
+header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div .centfarh{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: .2rem;
+}
+header .weatherapp .right .weatherreport .weatherdetails{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background: var(--var3);
+    padding: 2rem 3rem;
+}
+header .weatherapp .right .weatherreport .weatherdetails > p{
+    margin: 3rem 0;
+    color: #ffffff;
+}
+header .weatherapp .right .weatherreport .weatherdetails h4{
+    font-size: 2.3rem;
+    font-weight: 500; 
+    letter-spacing: .1rem;
+    position: relative;
+    width: max-content;
+    text-transform: uppercase;
+}
+header .weatherapp .right .weatherreport .weatherdetails h4::after{
+    content: "";
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom: 2px solid #ffffff;
+}
+header .weatherapp .right .weatherreport .weatherdetails .tempdetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+    margin: 1rem 0;
+}
+header .weatherapp .right .weatherreport .weatherdetails .tempdetail h5{
+    font-weight: 500;
+    position: relative;
+    width: max-content;
+    margin: 1rem 0 1rem 0;
+}
+header .weatherapp .right .weatherreport .weatherdetails .tempdetail h5::after{
+    content: "";
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom: 2px solid #ffffff;
+}
+header .weatherapp .right .weatherreport .weatherdetails .tempdetail .line{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+
+/* Media Queries  */
+
+@media (max-width: 1310px) {
+    header .weatherapp .left h2 {
+        font-size: 4.8rem; 
+    }
+    header { 
+        padding: 0  6rem; 
+    }
+}
+@media (max-width: 1220px) {
+     html {
+        font-size: 60%;
+     }
+}
+@media (max-width: 1174px) {
+    header {
+        padding: 0  4rem;
+    }
+}
+@media (max-width: 1138px) {
+    header .weatherapp .left {
+        width: 100%; 
+    }
+    header .weatherapp .left form {
+        width: 49rem; 
+    }
+    header {
+        padding: 0  8rem;
+    }
+    header { 
+        height: 116rem;
+    }
+    header .weatherapp { 
+        flex-direction: column;
+        grid-gap: 5rem;
+    }
+    header .weatherapp .right {
+        width: 100%;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small {
+        display: flex;
+        grid-gap: 10rem; 
+    }
+    header .weatherapp {
+        flex-direction: column;
+        grid-gap: 5rem;
+        margin-top: 10rem;
+    }
+    header {
+        height: 125rem;
+    }
+}
+
+@media  (max-width: 902px) {
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small {
+        display: flex;
+        grid-gap: 5rem;
+    }
+}
+@media  (max-width: 770px) {
+    header {
+        padding: 0  6rem;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small {
+        display: flex;
+        grid-gap: 3rem;
+    }
+}
+
+@media  (max-width: 650px) {
+    header {
+        padding: 0  4rem;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small {
+        display: flex;
+        grid-gap: 1rem;
+    }
+}
+
+@media  (max-width: 600px) {
+    html{
+        font-size: 55%;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small { 
+        grid-gap: 2rem;
+    }
+    header .weatherapp { 
+        grid-gap: 5rem;
+        margin-top: 7rem;
+    }
+}
+
+@media  (max-width: 520px) {
+    html{
+        font-size: 48%;
+    } 
+}
+
+@media  (max-width: 455px) {
+    header {
+        padding: 0  2rem;
+    }
+}
+
+@media  (max-width: 427px) {
+    *{
+        font-size: 1.6rem;
+    }
+    header {
+        padding: 0  2rem;
+        height: 119rem;
+    } 
+    header .weatherapp .left h2 {
+        font-size: 3.8rem;
+    }
+    header .weatherapp .left form {
+        width: 100%;
+    }
+    header .weatherapp {
+        grid-gap: 5rem;
+        margin-top: 5rem;
+    }
+    header .weatherapp .right .weatherreport .topbox .reportinfo h5 {
+        font-size: 2rem; 
+    }
+    header .weatherapp .right .weatherreport .weatherdetails h4 {
+        font-size: 2rem; 
+    }
+    header .weatherapp .right .weatherreport .weatherdetails { 
+        padding: 2rem 1rem;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small > div img {
+        width: 8rem;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small .secdate span {
+        font-size: 1rem;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport > h5 {
+        font-weight: 500;
+        font-size: 1.2rem; 
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempbox h3 {
+        font-size: 4.5rem;
+        font-weight: 500;
+    }
+    header .weatherapp .left p { 
+        width: 100%;
+    }
+
+}
+
+@media  (max-width: 377px) {
+    html{
+        font-size: 40%;
+    }
+    header .weatherapp .right .weatherreport .detailboxes .sideinfo .tempreport .small {
+        grid-gap: 1rem;
+    }
+}
+@media  (max-width: 320px) { 
+    header {
+        padding: 0  1rem;
+        height: 118rem;
+    } 
+}

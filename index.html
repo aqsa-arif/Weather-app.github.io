@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="./Images/cloudy.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title> Weather App </title>
+</head>
+
+<body>
+    <!-- <div class="headerbg">
+        <img src="./Images/sunset-sea.jpg" alt="">
+    </div> -->
+
+    <header>
+        <div class="logo">Weather</div>
+
+        <div class="weatherapp">
+            <div class="left">
+                <h2>Different kind of weather <br> across the world.</h2>
+                <p>The goal of weather prediction is to provide information so people and organizations can use to reduce weather-related losses and enhance societal benefits.</p>
+
+                <form action="">
+                    <input type="text" name="searchbar" id="searchbar" autocomplete="off"  placeholder="Search Location">
+                    <button type="submit" > <i class="fa-solid fa-magnifying-glass searchbtn"></i>
+                    </button> 
+                </form>
+                <span>Best way to know your city weather</span>
+
+            </div>
+
+            <div class="right">
+                <div class="weatherreport ">
+                    <div class="topbox"> 
+                        <img src="https://openweathermap.org/img/w/10d.png" alt="" class="toggleimg2">
+                        <div class="reportinfo">
+                            <h5>Total Weather Report </h5>
+                            <p class="date">New York, United States</p>
+                        </div>
+                    </div>
+
+                    <div class="detailboxes">
+                        <div class="sideinfo">
+                            <div class="tempbox">
+                                <h3 id="temperature">34  &#8451;</h3>
+                                <div class="descrption">Cloudy</div>
+                            </div>
+
+                            <div class="tempreport">
+                                <h5 class="lastname">New York Weather Report</h5>
+                                <div class="small">
+                                    <div>
+                                        <img src="https://openweathermap.org/img/w/10d.png" alt="" class="toggleimg">
+                                        <div class="secdate">
+                                            <i class="fa-solid fa-globe"></i>
+                                          <span>  New York US </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="temp">
+                                            <h5 class="main"> Clouds </h5>
+                                            <p class="perc">0% clouds</p>
+                                        </div>
+
+                                        <div class="centfarh">
+                                            <h5 class="cen">34 &#8451;</h5>
+                                            <h5 class="farh">75.6 &#8457;</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="weatherdetails">
+                            <h4>Weather Details</h4>
+                            <p class="latlong">New York 34.008 N 7.8568 E</p>
+
+                            <div class="tempdetail">
+                                <div class="line line1">
+                                    <p>Temperature Minimun</p>
+                                    <span>65 &#8451;</span>
+                                </div>
+                                <div class="line line2">
+                                    <p>Temperature Maximun</p>
+                                    <span>65 &#8451;</span>
+                                </div>
+                                <div class="line line3">
+                                    <p>Pressure</p>
+                                    <span>65 &#8451;</span>
+                                </div>
+                                <div class="line line4">
+                                    <p> Humidity</p>
+                                    <span>65 <i></i></span>
+                                </div>
+
+                                <h5>Wind</h5>
+                                <div class="line line5">
+                                    <p>Speed</p>
+                                    <span>65 </span>
+                                </div>
+                                <div class="line line6">
+                                    <p> Direction</p>
+                                    <span>65 </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <script src="./app.js"></script>
+</body>
+
+</html>
