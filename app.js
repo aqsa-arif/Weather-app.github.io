@@ -10,8 +10,7 @@ const weatherreport = document.querySelector('.weatherreport');
  
 
 const loadData = async (city) => { 
-    
-    const apikey = "3843b0f4aca893e2bbabc221982eb36c";
+   
     const data = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${city}&units=imperial&APPID=${apikey}`)
     const weatherdata = await data.json(); 
 
